@@ -1,7 +1,10 @@
 package com.lastminute.recruitment.domain;
 
+import com.lastminute.recruitment.domain.error.WikiPageCannotParse;
+import com.lastminute.recruitment.domain.error.WikiPageNotFound;
+
 public interface WikiReader {
 
-    WikiPage read(String link);
+    WikiPage read(String link) throws WikiPageNotFound, WikiPageCannotParse;
 
 }

@@ -21,4 +21,9 @@ public class InMemoryWikiPageRepository implements WikiPageRepository {
         );
     }
 
+    @Override
+    public WikiPage load(long id) {
+        return db.get(id);
+    }
+
 }
